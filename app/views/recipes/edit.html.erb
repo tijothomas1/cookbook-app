@@ -6,12 +6,20 @@
     <%= text_field_tag :title, @recipe.title %>
   </div>
   <div>
+    <%= label_tag :price %>
+    <%= text_field_tag :price, @recipe.price %>
+  </div>
+  <div>
     <%= label_tag :chef %>
     <%= text_field_tag :chef, @recipe.chef %>
   </div>
   <div>
     <%= label_tag :ingredients %>
     <%= text_field_tag :ingredients, @recipe.ingredients %>
+  </div>
+  <div>
+    <%= label_tag :image %>
+    <%= text_field_tag :image, @recipe.image %>
   </div>
   <div>
     <%= label_tag :directions %>

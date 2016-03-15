@@ -4,10 +4,12 @@
   <% @recipes.each do |recipe| %>
     <div class="col-md-offset-1 col-md-3 col-sm-6 list-view">
       <div class="thumbnail">
-        <h2><%= link_to recipe.title , "/recipes/#{recipe.id}" %></h2>
-        <h3><%= recipe.chef %></h3>
-        <h3><%= recipe.ingredients %></h3>
-        <h3><%= recipe.directions %></h3>
+        <h2>Title: <%= link_to recipe.title , "/recipes/#{recipe.id}" %></h2>
+        <h3>Chef: <%= recipe.chef %></h3>
+        <h3>Prep Time: <%= recipe.prep_time %></h3>
+        <h3>Ingredients: <%= recipe.ingredients %></h3>
+        <h3>Directions: <%= recipe.directions %></h3>
+        <h3>Total: <%= recipe.price %></h3>
         <%= image_tag recipe.image, class: "img-responsive" %>
       </div>
     </div>

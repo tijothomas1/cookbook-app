@@ -1,22 +1,14 @@
 <h1><%= @recipe.title %></h1>
 <h2>By: <%= @recipe.chef %></h2>
-<h4>Updated on: <%= @recipe.friendly_updated_at %></h4>
+<h1>Price: $<%= @recipe.price %></h1>
+<h1>Tax: $<%= @recipe.tax %></h1> <!-- The .tax is a model method -->
+<hr>
+<h1>Total: $<%= @recipe.total %></h1> <!-- The .total is a model method -->
+<h4>Updated on: <%= @recipe.friendly_updated_at %></h4> <!-- The .friendly_updated_at is a model method -->
 
-<h3>Prep Time: <%= @recipe.friendly_preptime %></h3>
+<h3>Prep Time: <%= @recipe.friendly_preptime %></h3> <!-- The .friendly_preptime is a model method -->
 
-<h3>Ingredients:</h3>
-<ul>
-  <% @ingredient_list.each do |ingredient| %>
-    <li><%= ingredient %></li>
-  <% end %>
-</ul>
 
-<h3>Directions:</h3>
-<ol>
-  <% @directions_list.each do |step| %>
-    <li><%= step %></li>
-  <% end %>
-</ol>
 <%= image_tag @recipe.image %>
 
 <%= link_to "Home", "/" %>

@@ -1,5 +1,21 @@
 class Recipe < ActiveRecord::Base
 
+  def sale_message
+    if price < 2
+      "Discount Item!"
+    else
+      "On Sale!"
+    end
+  end
+
+  def tax
+    price * 0.09
+  end
+
+  def total
+    price + tax
+  end
+
   def ingredient_list
     ingredients.split(", ")
   end
